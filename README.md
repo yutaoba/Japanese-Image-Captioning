@@ -10,8 +10,7 @@ Generate japanese captions that describe the contents of images
     cd data && ./download.sh && cd ../
 
 ## Configuration
-You need to decide parameters for translation, morphological tranformation, model training and prediction.
-- Checkpoint dirpath
+You need to decide parameters on `config.yml` for translation, morphological tranformation, model training and prediction.
 - Image filepath
 - Description filepath
 - Image dimensions
@@ -21,9 +20,10 @@ You need to decide parameters for translation, morphological tranformation, mode
 - Feed forward network dimension
 - Batch size
 - Epochs
+- Checkpoint dirpath
 - Testing model name
 
-## Translate from english to japanese
+## Translation from english to japanese
 ### Option 1 : Amazon Translate (default)
 Amazon Translate is a neural machine translation service. 
 You have to pay-as-you-go based on the number of characters of text that you processed. 
@@ -38,13 +38,21 @@ However, your access will be denied if you make too many requests in a short tim
     python3 translate.py
 
 ## Morphological transformation
+MeCab is an open-source morphological transformation engine for japanese.
+As a dictionary, you should use mecab-ipadic-NEologd including many neologisms (new word), which are extracted from many language resources on the Web.
 
     python3 mecab.py
 
 ## Train image captioning model
+Now, you have images and its japanese descriptions.
+The image captioning model consists of CNN and Transformer.
+After the training, the text vectorization and the image captioning model weights are saved into the files.
 
     python3 train.py
 
 ## Test image captioning model
-    
+You load the trained weights and build the text vectorization and the image captioning model.
+You can specify an image filepath with `-i` opition.
+Otherwise, the filepath is choosed at random from validation datasets.
+
     python3 test.py
