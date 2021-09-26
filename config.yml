@@ -1,0 +1,31 @@
+# Path to the training files
+train_path: "checkpoint2"
+
+# Path to the images and descriptions
+images_path: "data/Flicker8k_Dataset"
+descs_path_ori: "data/Flickr8k.token.txt"
+descs_path_ja: "data/descriptions_ja.txt"
+descs_path_mecab: "data/descriptions_mecab.txt"
+
+# Desired image dimensions
+img_size_w: 299
+img_size_h: 299
+
+# Vocabulary size
+vocab_size: 10000
+
+# Fixed length allowed for any sequence
+seq_length: 25
+
+# Dimension for the image embeddings and token embeddings
+embed_dim: 512
+
+# Per-layer units in the feed-forward network
+ff_dim: 512
+
+# Other training parameters
+batch_size: 64
+epochs: 30
+
+# Caption model name
+model_name: "cp-0015"
