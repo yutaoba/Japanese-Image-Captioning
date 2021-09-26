@@ -10,10 +10,10 @@ Generate japanese captions that describe the contents of images
     cd data && ./download.sh && cd ../
 
 ## Configuration
-Please decide parameters for translation, morphological tranformation, model training and prediction.
-- Checkpoint directory path
-- Image directory path
-- Description directory path
+You need to decide parameters for translation, morphological tranformation, model training and prediction.
+- Checkpoint dirpath
+- Image filepath
+- Description filepath
 - Image dimensions
 - Vocabulary size
 - Sequence length
@@ -33,7 +33,7 @@ To use Amazon Translate, you have to configure aws account.
 ### Option 2 : Googletrans
 Googletrans is a free python library that implemented Google Translate API. 
 This uses the Google Translate Ajax API to make calls to such methods as detect and translate. 
-However, your access will be denied if you too many requests in a short time.
+However, your access will be denied if you make too many requests in a short time.
 
     python3 translate.py
 
