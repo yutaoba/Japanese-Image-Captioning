@@ -54,5 +54,9 @@ After the training, the text vectorization and the image captioning model weight
 You load the trained weights and build the text vectorization and the image captioning model.
 You can specify an image filepath with `-i` opition.
 Otherwise, the filepath is choosed at random from validation datasets.
-
+    
+    # Use the specific image
+    python3 test.py -i <image filepath>
+    
+    # Use the random image
     python3 test.py
