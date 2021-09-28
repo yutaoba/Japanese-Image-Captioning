@@ -1,9 +1,12 @@
 # Japanese-Image-Captioning
 Generate japanese captions that describe the contents of images
 
-## Git clone
+## Build environment
 
     git clone https://github.com/yutaoba-san/Japanese-Image-Captioning.git
+    cd Japanese-Image-Captioning
+    ./build.sh Dockerfile image-caption
+    ./run.sh image-caption
 
 ## Download Flickr 8k Dataset
 
@@ -23,7 +26,7 @@ You need to decide parameters on `config.yml` for translation, morphological tra
 - Checkpoint dirpath
 - Testing model name
 
-## Translation from english to japanese
+## Translate from english to japanese
 ### Option 1 : Amazon Translate (default)
 Amazon Translate is a neural machine translation service. 
 You have to pay-as-you-go based on the number of characters of text that you processed. 
@@ -54,9 +57,9 @@ After the training, the text vectorization and the image captioning model weight
 You load the trained weights and build the text vectorization and the image captioning model.
 You can specify an image filepath with `-i` opition.
 Otherwise, the filepath is choosed at random from validation datasets.
-    
-    # Use the specific image
+
+### Specific image
     python3 test.py -i <image filepath>
     
-    # Use the random image
+### Random image
     python3 test.py
