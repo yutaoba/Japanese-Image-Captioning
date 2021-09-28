@@ -32,6 +32,7 @@ RUN apt-get update -q  && \
         libmecab-dev \
         mecab-ipadic-utf8
 
+# Python packages
 RUN pip3 install -U pip && \
     pip3 install numpy \
     matplotlib \
@@ -45,8 +46,8 @@ RUN pip3 install -U pip && \
     mecab-python3 \
     boto3
 
+# mecab-ipadic-NEologd configuration
 WORKDIR /root
 RUN git clone https://github.com/neologd/mecab-ipadic-neologd.git
 RUN cd mecab-ipadic-neologd && bin/install-mecab-ipadic-neologd -n -y
 RUN echo "dicdir=/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd">/etc/mecabrc
-
