@@ -127,3 +127,20 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Mac
+.bash_history
+__MACOSX/
+
+# Custom file or folder
+data/CrowdFlowerAnnotations.txt
+data/ExpertAnnotations.txt
+data/Flicker8k_Dataset/
+data/Flickr8k.lemma.token.txt
+data/Flickr8k.token.txt
+data/Flickr_8k.devImages.txt
+data/Flickr_8k.testImages.txt
+data/Flickr_8k.trainImages.txt
+data/readme.txt
+checkpoint*
+!checkpoint/.gitkeep
