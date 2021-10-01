@@ -64,4 +64,4 @@ Otherwise, the filepath is choosed at random from validation datasets.
 ### Random image
     python3 test.py
 
-![alt_text](https://github.com/yutaoba/Japanese-Image-Captioning/tree/main/sample/278007543_99f5a91a3e.jpg?raw=true)
+![alt_text](https://github.com/yutaoba/Japanese-Image-Captioning/blob/main/sample/278007543_99f5a91a3e.jpg?raw=true)
