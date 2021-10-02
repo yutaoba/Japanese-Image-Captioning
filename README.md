@@ -66,6 +66,6 @@ Otherwise, the filepath is choosed at random from validation datasets.
 
 ![alt_text](https://github.com/yutaoba/Japanese-Image-Captioning/blob/main/sample/278007543_99f5a91a3e.jpg?raw=true)
 
-茶色 と 白 の 犬 が 水 の 中 を 走っ て いる
+Prediction result: 茶色 と 白 の 犬 が 水 の 中 を 走っ て いる
 
 
