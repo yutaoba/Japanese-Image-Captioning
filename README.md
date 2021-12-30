@@ -3,7 +3,7 @@ Generate japanese captions that describe the contents of images
 
 ## Build environment
 
-    git clone https://github.com/yutaoba-san/Japanese-Image-Captioning.git
+    git clone https://github.com/yutaoba/Japanese-Image-Captioning.git
     cd Japanese-Image-Captioning
     ./build.sh Dockerfile image-caption
     ./run.sh image-caption
